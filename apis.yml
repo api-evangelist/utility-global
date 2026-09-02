@@ -1,10 +1,19 @@
 aid: utility-global
 name: Utility Global
-description: 'Utility Global is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Utility Global is a Houston, Texas industrial decarbonization company founded
+  in 2018. Its proprietary H2Gen and eXERO platform converts water into high-purity hydrogen
+  using the residual electrochemical energy already present in industrial off-gases and biogenic
+  gases — driving water electrolysis without electricity — while concentrating CO2 into a
+  separate capture-ready stream. The company sells into steel, low-carbon fuels, and refining,
+  petrochemicals and chemicals, and has run demonstration programs on blast-furnace off-gas at
+  commercial steel facilities. It is a hardware and process-technology business, not a software
+  vendor: its public web presence is a marketing site with no developer program, no API
+  documentation, and no machine-readable contract of any kind.'
+image: https://utilityglobal.com/wp-content/uploads/2025/04/UtilityGlobal_Logo_Primary-1024x232.webp
 url: https://raw.githubusercontent.com/api-evangelist/utility-global/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-source-url: https://forgeglobal.com/utility-global_stock/
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +21,14 @@ created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Energy
+- Hydrogen
+- Decarbonization
+- Clean Energy
+- Industrial
+- Steel
+- Climate Tech
+- Chemicals
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,48 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/utility-global-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/utility-global_stock/
+  url: https://utilityglobal.com/
+- type: About
+  url: https://utilityglobal.com/about-us/
+- type: Blog
+  url: https://utilityglobal.com/news/
+- type: BlogRSS
+  url: https://utilityglobal.com/feed/
+- type: Newsroom
+  url: https://media.utilityglobal.com/news
+- type: Contact
+  url: https://utilityglobal.com/contact/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/utilityglobal/
+- type: LLMsTxt
+  url: llms/utility-global-llms.txt
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Utility Global sells hydrogen-producing reactor hardware (H2Gen/eXERO) into steel and
+    refining plants; utilityglobal.com is a WordPress marketing site with no developer section,
+    no api./developer./docs. subdomain in DNS at all, and the only machine-readable endpoint on
+    the domain is the stock WordPress core /wp-json/ CMS route index, which is infrastructure
+    rather than a product API.
+  evidence:
+  - url: https://utilityglobal.com/openapi.json
+    status: 404
+  - url: https://utilityglobal.com/.well-known/agent-card.json
+    status: 404
+  - url: https://utilityglobal.com/llms.txt
+    status: 404
+  - url: https://api.utilityglobal.com/
+    status: 0
+  - url: https://api.github.com/orgs/utilityglobal
+    status: 404
+  - url: https://utilityglobal.com/wp-json/
+    status: 200
+  checked: '2026-09-02'

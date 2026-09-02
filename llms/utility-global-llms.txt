@@ -1,0 +1,57 @@
+# Utility Global
+
+> Utility Global is a Houston, Texas industrial decarbonization company founded in 2018. Its
+> H2Gen / eXERO platform converts water into high-purity hydrogen using the residual
+> electrochemical energy already present in industrial off-gases and biogenic gases — driving
+> water electrolysis without electricity — while concentrating CO2 into a separate,
+> capture-ready stream.
+
+Generated: 2026-09-02
+Method: generated (from apis.yml and this repo's probe artifacts — Utility Global publishes no
+llms.txt of its own; https://utilityglobal.com/llms.txt returned HTTP 404 on 2026-09-02)
+Source: apis.yml
+
+## What this company is
+
+Utility Global is a hardware and process-technology business, not a software vendor. It sells
+into steel, low-carbon fuels, and refining / petrochemicals / chemicals, and has demonstrated
+hydrogen production from blast-furnace off-gas at commercial steel facilities. There is no
+developer program, no API documentation, no SDK, no CLI, and no machine-readable contract of
+any kind on any host the company operates.
+
+## Company
+
+- Home: https://utilityglobal.com/
+- About: https://utilityglobal.com/about-us/
+- H2Gen technology: https://utilityglobal.com/h2gen/
+- Markets: https://utilityglobal.com/markets/
+- Projects: https://utilityglobal.com/projects/
+- News: https://utilityglobal.com/news/
+- News feed (RSS): https://utilityglobal.com/feed/
+- Newsroom (HubSpot): https://media.utilityglobal.com/news
+- Contact: https://utilityglobal.com/contact/
+- LinkedIn: https://www.linkedin.com/company/utilityglobal/
+
+## APIs
+
+None. As of 2026-09-02 Utility Global publishes no API.
+
+## What was checked (2026-09-02)
+
+- OpenAPI / Swagger on the site root — /openapi.json, /swagger.json, /api-docs, /docs: all 404
+- Dedicated API hosts — api.utilityglobal.com, developer.utilityglobal.com,
+  docs.utilityglobal.com: no DNS A record (NXDOMAIN)
+- /.well-known/ on utilityglobal.com and media.utilityglobal.com — security.txt,
+  openid-configuration, oauth-authorization-server, api-catalog, ai-plugin.json,
+  agent-card.json, agent.json: all 404 (see well-known/utility-global-well-known.yml)
+- A2A agent card: not served on any host — no AgentCard artifact was written
+- MCP server: none published; none discoverable
+- GitHub organization: api.github.com/orgs/utilityglobal and /orgs/utility-global both 404
+- Package registries: npm search for "utilityglobal" returned 0 results; PyPI 404
+- llms.txt: 404 on both hosts
+
+## Artifacts in this repo
+
+- security/utility-global-domain-security.yml — probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture
+- well-known/utility-global-well-known.yml — recorded absence of every named /.well-known/ path
+- llms/utility-global-llms.txt — this file

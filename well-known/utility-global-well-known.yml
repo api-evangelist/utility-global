@@ -1,0 +1,56 @@
+generated: '2026-09-02'
+method: probed
+source: live HTTPS probes of the named /.well-known/ path list on every host in apis.yml
+note: >-
+  Every named path 404s on both hosts. utilityglobal.com is a WordPress marketing site whose
+  404 handler returns the themed HTML error page (HTTP 404, text/html); media.utilityglobal.com
+  is a HubSpot-hosted newsroom that also returns 404 for every path. No /.well-known/ document
+  of any kind is served, so NO WellKnown or SecurityTxt pointer is emitted in apis.yml — this
+  file records a verified absence, not a presence.
+hosts:
+- host: utilityglobal.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: media.utilityglobal.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
