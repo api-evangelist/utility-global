@@ -9,11 +9,11 @@
       "method": "discovered"
     },
     {
-      "source": "https://utilityglobal.com/about-us/",
+      "source": "https://utilityglobal.com/feed/",
       "feed_url": "https://utilityglobal.com/feed/",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "feed"
     },
     {
       "source": "https://utilityglobal.com/news/feed/",
@@ -21,15 +21,8 @@
       "title": "",
       "saved": 0,
       "method": "feed"
-    },
-    {
-      "source": "https://utilityglobal.com/feed/",
-      "feed_url": "https://utilityglobal.com/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed"
     }
   ],
   "post_count": 11,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
